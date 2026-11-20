@@ -1,7 +1,11 @@
 # GitHub → Hostinger Yayın Akışı
 
-Bu proje statik bir sitedir; derleme adımı yoktur. `main` dalına yapılan her push,
-GitHub Actions üzerinden Hostinger'a otomatik yüklenir.
+Bu proje statik bir sitedir; derleme adımı yoktur.
+
+> **Aktif yöntem:** Hostinger hPanel → **Git** entegrasyonu. `main` dalına yapılan her push
+> otomatik olarak çekilir ve `public_html` altında yayına alınır.
+>
+> Aşağıdaki GitHub Actions + FTP akışı **isteğe bağlı/manuel yedek**tir; otomatik tetiklenmez.
 
 ## 1. GitHub deposu
 
@@ -47,11 +51,11 @@ Depo → **Settings → Secrets and variables → Actions → New repository sec
 > 404 alırsanız dosyanın `public_html/.htaccess` altında olduğunu ve LiteSpeed'in
 > `mod_rewrite` desteğinin açık olduğunu kontrol edin.
 
-## 4. Otomatik yayın
+## 4. İsteğe bağlı: GitHub Actions ile FTP
 
-- `main` dalına push → **Actions → Deploy to Hostinger** otomatik çalışır.
-- Actions sekmesinden **Run workflow** ile manuel de tetiklenebilir.
+- Varsayılan olarak otomatik tetiklenmez; **Actions → Deploy to Hostinger (manual FTP) → Run workflow** ile çalıştırılır.
 - İlk çalıştırmada tüm dosyalar, sonraki çalıştırmalarda yalnızca değişenler yüklenir.
+- FTP secrets tanımlı değilse iş akışı yükleme adımını atlar ve yeşil tamamlanır.
 
 Yerel değişiklikleri tek komutla göndermek için:
 
@@ -59,16 +63,16 @@ Yerel değişiklikleri tek komutla göndermek için:
 ./deploy.sh "Hizmetler sayfası güncellendi"
 ```
 
-## 5. Alternatif: Hostinger hPanel Git deploy
+## 5. Hostinger hPanel Git (aktif yöntem)
 
 Hostinger → **Gelişmiş → Git**:
 
 1. GitHub hesabını bağlayın, `ikon-gumrukleme` deposunu ve `main` dalını seçin.
 2. Yayın dizini: `public_html`.
-3. **Deploy** ile çekin. Otomatik çekim seçeneği varsa etkinleştirin.
+3. **Deploy** ile çekin. Otomatik çekim (push → otomatik deploy) açık olmalı.
 
-Not: Bu yöntem depodaki **tüm** dosyaları (ör. `preview/`, `tools/`, `.github/`) yayına dahil eder.
-Daha temiz bir yayın için FTP + Actions akışı önerilir.
+Not: Bu yöntem depodaki tüm dosyaları `public_html` altına kopyalar. `.htaccess`, `preview/`,
+`tools/` ve `.github/` yollarını 404 ile gizlediği için kaynak dosyalar dışarıdan erişilemez.
 
 ## 6. Yayın sonrası kontrol listesi
 

@@ -1,8 +1,8 @@
-name: Deploy to Hostinger
+name: Deploy to Hostinger (manual FTP)
 
+# Aktif otomatik yayın: Hostinger hPanel → Git entegrasyonu (push ile otomatik çekim).
+# Bu iş akışı yalnızca isteğe bağlı/manual FTP yedeği içindir.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 concurrency:

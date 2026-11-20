@@ -1,8 +1,10 @@
 # İKON Gümrük Müşavirliği — Kurumsal Web Sitesi
 
-[![Deploy to Hostinger](https://github.com/tlgrsy/ikon-gumrukleme/actions/workflows/deploy-hostinger.yml/badge.svg)](https://github.com/tlgrsy/ikon-gumrukleme/actions/workflows/deploy-hostinger.yml)
+**GitHub:** <https://github.com/tlgrsy/ikon-gumrukleme>
 
-**GitHub:** <https://github.com/tlgrsy/ikon-gumrukleme> · **Yayın:** `main` dalına her push, FTP secrets tanımlıysa Hostinger'a otomatik deploy tetikler.
+**Canlı (geçici):** <https://stoic-green-dotterel-55.hostingersite.com/>
+
+**Yayın:** Hostinger hPanel → Git entegrasyonu. `main` dalına her push otomatik olarak çekilir ve yayına alınır. GitHub Actions FTP iş akışı isteğe bağlı/manuel yedektir.
 
 Awwwards referanslı, çok sayfalı, Türkçe/İngilizce kurumsal web sitesi tasarımı.
 Tasarım yönü **“Signal & Steel”**: derin lacivert-siyah zemin, kâğıt dokulu açık bölümler,
