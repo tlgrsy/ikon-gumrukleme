@@ -6,6 +6,10 @@ DirectoryIndex index.html
   RewriteEngine On
   RewriteBase /
 
+  # Geliştirme ve kaynak dosyalarını gizle
+  RewriteRule ^(tools|preview|\.github)(/|$) - [R=404,L]
+  RewriteRule ^(README\.md|DEPLOY\.md|deploy\.sh)$ - [R=404,L]
+
   # /index.html -> /
   RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
   RewriteRule ^ / [R=301,L,QSA]
