@@ -85,7 +85,7 @@ Hostinger (LiteSpeed) `mod_rewrite` destekler; `.htaccess` depo kökünde ve dep
 │   ├── js/i18n.js           # TR/EN sözlük ve değiştirici
 │   ├── js/world-dots.js     # dünya haritası nokta verisi
 │   ├── fonts/               # Outfit, Instrument Serif, JetBrains Mono (subset)
-│   └── img/                 # optimize görseller + logo.svg + favicon + og.jpg
+│   └── img/                 # optimize görseller + logo.svg + favicon-2026.svg + og-2026.jpg
 ├── .htaccess                # temiz URL kuralları (Apache/LiteSpeed)
 ├── tools/                   # üretim / ekran görüntüsü / QA yardımcıları
 ├── ATTRIBUTIONS.md          # görsel lisansları
@@ -115,7 +115,9 @@ Türkçe olarak okunabilir kalır.
 
 - Logo: `assets/img/logo.svg` (beyaz + kırmızı çizgi, koyu zemin için)
 - Header yüksekliği 52px, footer 460px genişlik, preloader 520px genişlik
-- Favicon: `assets/img/favicon.svg` (logodan türetilmiş monogram)
+- Favicon: `assets/img/favicon-2026.svg` (logodan türetilmiş monogram)
+- OG görseli: `assets/img/og-2026.jpg`
+- CSS/JS bağlantılarında `?v=20261121` sürümü vardır; stil veya script değişince bu değeri artırın.
 
 ---
 

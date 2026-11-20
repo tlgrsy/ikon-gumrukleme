@@ -34,6 +34,9 @@ DirectoryIndex index.html
 
 # Basit güvenlik başlıkları
 <IfModule mod_headers.c>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
   Header set X-Content-Type-Options "nosniff"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>

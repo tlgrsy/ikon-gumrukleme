@@ -25,17 +25,17 @@ HEAD = '''<!DOCTYPE html>
 <title data-i18n="{tk}">{title}</title>
 <meta name="description" data-i18n-content="{dk}" content="{desc}">
 <meta name="theme-color" content="#070A0F">
-<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-2026.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/Outfit-200_600-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/Outfit-200_600-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/InstrumentSerif-Italic-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v=20261121">
 <noscript><style>.preloader{{display:none!important}}[data-reveal]{{opacity:1!important;transform:none!important}}.mask-line>span{{transform:none!important}}.cursor,.cursor-dot{{display:none!important}}.faq__a{{grid-template-rows:1fr!important}}.form__success{{display:none!important}}</style></noscript>
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
-<meta property="og:image" content="assets/img/og.jpg">
+<meta property="og:image" content="assets/img/og-2026.jpg">
 </head>
 <body>
 '''
@@ -46,7 +46,7 @@ def page(filename, title, tk, desc, dk, active, body, body_class=''):
     out += progress + '\n' + preloader + '\n' + start
     out = out.replace(header, nav_for(active))
     out += '\n<main id="main">\n' + body + '\n</main>\n\n' + footer
-    out += '\n\n<script src="assets/js/i18n.js"></script>\n<script src="assets/js/main.js"></script>\n</body>\n</html>\n'
+    out += '\n\n<script src="assets/js/i18n.js?v=20261121"></script>\n<script src="assets/js/main.js?v=20261121"></script>\n</body>\n</html>\n'
     pathlib.Path(filename).write_text(out)
     print('wrote', filename, len(out))
 
