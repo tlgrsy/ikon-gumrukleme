@@ -31,7 +31,7 @@
 <div class="progress" id="progress" aria-hidden="true"></div>
 <div class="preloader" id="preloader" aria-hidden="true">
   <div class="preloader__top mono"><span data-i18n="pre.top">Gümrük Müşavirliği</span><span>İstanbul · 41.00°N 29.03°E</span></div>
-  <div class="preloader__brand">ikon</div>
+  <img class="preloader__brand" src="assets/img/logo.svg" width="112" height="57" alt="">
   <div class="preloader__bottom"><span class="preloader__count num" id="preCount">000</span><span class="preloader__bar"><i id="preBar"></i></span><span class="mono" data-i18n="pre.since">1994'ten beri</span></div>
 </div>
 
@@ -41,22 +41,21 @@
 
 <header class="nav" id="nav">
   <div class="nav__inner">
-    <a class="brand" href="index.html" aria-label="İKON ana sayfa">
-      <span class="brand__mark"><span>i</span></span>
-      <span class="brand__type"><span class="brand__word">ikon</span><span class="brand__sub" data-i18n="brand.sub">Gümrük Müşavirliği</span></span>
+    <a class="brand" href="./" aria-label="İKON Gümrük Müşavirlik Hizmetleri">
+      <img class="brand__logo" src="assets/img/logo.svg" width="112" height="57" alt="">
     </a>
     <nav class="nav__menu" aria-label="Ana menü">
-      <a class="nav__link is-active" href="index.html" data-i18n="nav.home">Ana Sayfa<span class="dot"></span></a>
-      <a class="nav__link" href="kurumsal.html" data-i18n="nav.about">Kurumsal<span class="dot"></span></a>
-      <a class="nav__link" href="hizmetler.html" data-i18n="nav.services">Hizmetler<span class="dot"></span></a>
-      <a class="nav__link" href="iletisim.html" data-i18n="nav.contact">İletişim<span class="dot"></span></a>
+      <a class="nav__link is-active" href="./" data-i18n="nav.home">Ana Sayfa<span class="dot"></span></a>
+      <a class="nav__link" href="kurumsal" data-i18n="nav.about">Kurumsal<span class="dot"></span></a>
+      <a class="nav__link" href="hizmetler" data-i18n="nav.services">Hizmetler<span class="dot"></span></a>
+      <a class="nav__link" href="iletisim" data-i18n="nav.contact">İletişim<span class="dot"></span></a>
     </nav>
     <div class="nav__right">
       <div class="lang" role="group" aria-label="Dil">
         <button type="button" data-lang="tr" aria-pressed="true">TR</button>
         <button type="button" data-lang="en" aria-pressed="false">EN</button>
       </div>
-      <a class="btn nav__cta" href="iletisim.html"><span data-i18n="nav.cta">Teklif alın</span><span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+      <a class="btn nav__cta" href="iletisim"><span data-i18n="nav.cta">Teklif alın</span><span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
       <button class="nav__burger" id="burger" aria-label="Menü" aria-expanded="false" aria-controls="menu"><i></i><i></i></button>
     </div>
   </div>
@@ -64,10 +63,10 @@
 
 <div class="menu" id="menu" aria-hidden="true">
   <nav class="menu__links" aria-label="Mobil menü">
-    <a class="menu__link" href="index.html" style="transition-delay:.06s"><em>01</em><span data-i18n="nav.home">Ana Sayfa</span></a>
-    <a class="menu__link" href="kurumsal.html" style="transition-delay:.12s"><em>02</em><span data-i18n="nav.about">Kurumsal</span></a>
-    <a class="menu__link" href="hizmetler.html" style="transition-delay:.18s"><em>03</em><span data-i18n="nav.services">Hizmetler</span></a>
-    <a class="menu__link" href="iletisim.html" style="transition-delay:.24s"><em>04</em><span data-i18n="nav.contact">İletişim</span></a>
+    <a class="menu__link" href="./" style="transition-delay:.06s"><em>01</em><span data-i18n="nav.home">Ana Sayfa</span></a>
+    <a class="menu__link" href="kurumsal" style="transition-delay:.12s"><em>02</em><span data-i18n="nav.about">Kurumsal</span></a>
+    <a class="menu__link" href="hizmetler" style="transition-delay:.18s"><em>03</em><span data-i18n="nav.services">Hizmetler</span></a>
+    <a class="menu__link" href="iletisim" style="transition-delay:.24s"><em>04</em><span data-i18n="nav.contact">İletişim</span></a>
   </nav>
   <div class="menu__foot">
     <span>+90 216 324 05 95</span>
@@ -94,8 +93,8 @@
         </h1>
         <p class="hero__lead" data-reveal style="--d:.5s" data-i18n="hero.lead">1994'ten bu yana ithalat, ihracat ve transit işlemlerinde; mevzuatı bilen, süreci yöneten ve her evrakı takip eden bir ekip. İstanbul'dan tüm gümrüklerde.</p>
         <div class="hero__actions" data-reveal style="--d:.62s">
-          <a class="btn" href="hizmetler.html" data-magnetic><span data-i18n="hero.cta1">Hizmetlerimiz</span><span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
-          <a class="btn btn--ghost" href="iletisim.html" data-magnetic><span data-i18n="hero.cta2">Bize ulaşın</span><span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+          <a class="btn" href="hizmetler" data-magnetic><span data-i18n="hero.cta1">Hizmetlerimiz</span><span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+          <a class="btn btn--ghost" href="iletisim" data-magnetic><span data-i18n="hero.cta2">Bize ulaşın</span><span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
         </div>
         <div class="hero__meta" data-reveal style="--d:.72s">
           <div><b>1994</b><span data-i18n="hero.m1">Kuruluş</span></div>
@@ -135,7 +134,7 @@
         <div class="manifest__col">
           <p class="lead" data-reveal data-i18n="m.lead">1994'te, gümrükleme hizmetlerinde uzman ve deneyimli bir kadro tarafından kurulan İKON; proaktif ekip çalışması, hızlı ve güvenilir sonuç üretmesi ve dürüstlük ilkelerine bağlılığıyla bugün sektörün en seçkin kuruluşlarından biri.</p>
           <p class="small" data-reveal style="--d:.08s" data-i18n="m.body">Türk ekonomisinin seçkin kuruluşlarından oluşan portföyümüz ve çağın getirdiği yeni anlayışla, gümrük müşavirliğinden tam bir lojistik çözüm ortağı olmaya doğru adımlarımızı sürdürüyoruz. Rekabetin yol göstericisi, kalitenin ön koşul, müşterinin ise vazgeçilmez olduğu iş dünyasında belirleyici etken; bireysel kalite, ekip kalitesi ve yönetim kalitesidir.</p>
-          <a class="link-arrow" href="kurumsal.html" data-reveal style="--d:.16s"><span data-i18n="m.link">Kurumsal profil</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+          <a class="link-arrow" href="kurumsal" data-reveal style="--d:.16s"><span data-i18n="m.link">Kurumsal profil</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
         </div>
         <figure class="manifest__figure" data-reveal="scale">
           <img src="assets/img/aerial-1600.webp" srcset="assets/img/aerial-900.webp 900w, assets/img/aerial-1600.webp 1600w" sizes="(max-width: 1024px) 92vw, 58vw" width="1600" height="1200" alt="Liman sahasında konteyner istif alanları ve gemi trafiği" loading="lazy" decoding="async">
@@ -157,41 +156,41 @@
       <div class="head">
         <div class="head__label"><span class="eyebrow" data-i18n="sv.label">02 — Hizmetler</span></div>
         <h2 class="head__title" data-reveal><span data-i18n="sv.title1">Gümrükte tek muhatap,</span><br><span class="dim" data-i18n="sv.title2">tek dosya, tek süreç.</span></h2>
-        <div class="head__aside"><a class="link-arrow" href="hizmetler.html"><span data-i18n="sv.all">Tüm hizmetler</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+        <div class="head__aside"><a class="link-arrow" href="hizmetler"><span data-i18n="sv.all">Tüm hizmetler</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
       </div>
 
       <div class="svc-list" id="svcList">
-        <a class="svc-row" href="hizmetler.html#ithalat" data-preview="assets/img/detail-700.webp" data-preview-label="İthalat" data-reveal>
+        <a class="svc-row" href="hizmetler#ithalat" data-preview="assets/img/detail-700.webp" data-preview-label="İthalat" data-reveal>
           <span class="svc-row__num">01</span>
           <span class="svc-row__title" data-i18n="sv.1.t">İthalat İşlemleri</span>
           <span class="svc-row__desc" data-i18n="sv.1.d">GTİP tespitinden muayeneye, tahakkuktan teslime kadar tüm ithalat süreci.</span>
           <span class="svc-row__arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
         </a>
-        <a class="svc-row" href="hizmetler.html#ihracat" data-preview="assets/img/ship-900.webp" data-preview-label="İhracat" data-reveal style="--d:.05s">
+        <a class="svc-row" href="hizmetler#ihracat" data-preview="assets/img/ship-900.webp" data-preview-label="İhracat" data-reveal style="--d:.05s">
           <span class="svc-row__num">02</span>
           <span class="svc-row__title" data-i18n="sv.2.t">İhracat İşlemleri</span>
           <span class="svc-row__desc" data-i18n="sv.2.d">A.TR, EUR.1, menşe şahadetnamesi ve ihracat rejimine dair tüm evrak.</span>
           <span class="svc-row__arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
         </a>
-        <a class="svc-row" href="hizmetler.html#bilgi" data-preview="assets/img/stacks-700.webp" data-preview-label="Bilgi" data-reveal style="--d:.1s">
+        <a class="svc-row" href="hizmetler#bilgi" data-preview="assets/img/stacks-700.webp" data-preview-label="Bilgi" data-reveal style="--d:.1s">
           <span class="svc-row__num">03</span>
           <span class="svc-row__title" data-i18n="sv.3.t">Bilgi İşletim Sistemi</span>
           <span class="svc-row__desc" data-i18n="sv.3.d">Resmî Gazete ve mevzuat takibi; müşteriye özel, uzman yorumlu bilgilendirme.</span>
           <span class="svc-row__arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
         </a>
-        <a class="svc-row" href="hizmetler.html#mevzuat" data-preview="assets/img/aerial-900.webp" data-preview-label="Mevzuat" data-reveal style="--d:.15s">
+        <a class="svc-row" href="hizmetler#mevzuat" data-preview="assets/img/aerial-900.webp" data-preview-label="Mevzuat" data-reveal style="--d:.15s">
           <span class="svc-row__num">04</span>
           <span class="svc-row__title" data-i18n="sv.4.t">Mevzuat &amp; Teknik Danışmanlık</span>
           <span class="svc-row__desc" data-i18n="sv.4.d">Bakanlık ve idarelerle doğrudan temas; güncel ve uygulanabilir yorum.</span>
           <span class="svc-row__arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
         </a>
-        <a class="svc-row" href="hizmetler.html#kurye" data-preview="assets/img/marus-900.webp" data-preview-label="Kurye" data-reveal style="--d:.2s">
+        <a class="svc-row" href="hizmetler#kurye" data-preview="assets/img/marus-900.webp" data-preview-label="Kurye" data-reveal style="--d:.2s">
           <span class="svc-row__num">05</span>
           <span class="svc-row__title" data-i18n="sv.5.t">Motorlu Kurye &amp; Evrak</span>
           <span class="svc-row__desc" data-i18n="sv.5.d">Günün her saati evrak alışverişi; gümrük sahasında kaybedilmeyen zaman.</span>
           <span class="svc-row__arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
         </a>
-        <a class="svc-row" href="hizmetler.html#edi" data-preview="assets/img/cranes-900.webp" data-preview-label="EDI" data-reveal style="--d:.25s">
+        <a class="svc-row" href="hizmetler#edi" data-preview="assets/img/cranes-900.webp" data-preview-label="EDI" data-reveal style="--d:.25s">
           <span class="svc-row__num">06</span>
           <span class="svc-row__title" data-i18n="sv.6.t">EDI &amp; Dijital Gümrük</span>
           <span class="svc-row__desc" data-i18n="sv.6.d">Elektronik veri transferini Türkiye'de ilk kullanan firmalardan biri.</span>
@@ -217,7 +216,7 @@
           <span class="eyebrow" data-i18n="pr.label">03 — Süreç</span>
           <h2 data-reveal><span data-i18n="pr.title1">Belirsizliğin</span><br><span class="serif" style="color:var(--orange)" data-i18n="pr.title2">bittiği yer.</span></h2>
           <p class="small" data-reveal data-i18n="pr.lead">Her dosya aynı disiplinle açılır, aynı titizlikle kapanır. Beş adımda ne olduğunu her an bilirsiniz.</p>
-          <a class="link-arrow" href="hizmetler.html" data-reveal><span data-i18n="pr.link">Süreç detayları</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+          <a class="link-arrow" href="hizmetler" data-reveal><span data-i18n="pr.link">Süreç detayları</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
         </div>
         <div class="process__steps" id="steps">
           <article class="step">
@@ -302,7 +301,7 @@
           <span class="eyebrow" data-i18n="faq.label">05 — Sıkça sorulanlar</span>
           <h2 data-reveal><span data-i18n="faq.title1">Merak edilenler,</span><br><span class="serif" style="color:var(--orange)" data-i18n="faq.title2">net cevaplar.</span></h2>
           <p class="small" data-reveal data-i18n="faq.lead">Aradığınız cevabı bulamadıysanız, doğrudan arayın: süreci birlikte netleştirelim.</p>
-          <a class="link-arrow" href="iletisim.html" style="margin-top:22px" data-reveal><span data-i18n="faq.cta">Soru sorun</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+          <a class="link-arrow" href="iletisim" style="margin-top:22px" data-reveal><span data-i18n="faq.cta">Soru sorun</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
         </div>
         <div class="faq__list">
           <div class="faq__item">
@@ -338,7 +337,7 @@
       <h2 class="cta__title" data-reveal><span data-i18n="cta.title1">Yükünüz yolda,</span> <em data-i18n="cta.title2">evrakınız bizde.</em></h2>
       <p class="cta__sub" data-i18n="cta.sub">İthalat, ihracat veya transit; tek bir dosya için bile doğru muhatap olalım. Bir telefon kadar yakınız.</p>
       <div class="cta__actions">
-        <a class="btn" href="iletisim.html" data-magnetic><span data-i18n="cta.b1">Teklif alın</span><span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+        <a class="btn" href="iletisim" data-magnetic><span data-i18n="cta.b1">Teklif alın</span><span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
         <a class="btn btn--ghost" href="tel:+902163240595" data-magnetic><span>+90 216 324 05 95</span><span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span></a>
       </div>
     </div>
@@ -347,7 +346,7 @@
 
 <footer class="footer">
   <div class="shell">
-    <div class="footer__word">ikon<em class="footer__word-meta">Gümrük Müşavirliği<br>Since 1994 · İstanbul</em></div>
+    <div class="footer__word"><img src="assets/img/logo.svg" width="112" height="57" alt="İKON"><em class="footer__word-meta" data-i18n="ft.since">1994'ten beri · İstanbul</em></div>
     <div class="footer__grid">
       <div class="footer__col">
         <h4 data-i18n="ft.office">Merkez ofis</h4>
@@ -358,14 +357,14 @@
         <h4 data-i18n="ft.contact">İletişim</h4>
         <a href="tel:+902163240595">T +90 216 324 05 95</a>
         <a href="tel:+902163249444">F +90 216 324 94 44</a>
-        <a href="iletisim.html" data-i18n="ft.form">Teklif formu</a>
+        <a href="iletisim" data-i18n="ft.form">Teklif formu</a>
       </div>
       <div class="footer__col">
         <h4 data-i18n="ft.menu">Menü</h4>
-        <a href="index.html" data-i18n="nav.home">Ana Sayfa</a>
-        <a href="kurumsal.html" data-i18n="nav.about">Kurumsal</a>
-        <a href="hizmetler.html" data-i18n="nav.services">Hizmetler</a>
-        <a href="iletisim.html" data-i18n="nav.contact">İletişim</a>
+        <a href="./" data-i18n="nav.home">Ana Sayfa</a>
+        <a href="kurumsal" data-i18n="nav.about">Kurumsal</a>
+        <a href="hizmetler" data-i18n="nav.services">Hizmetler</a>
+        <a href="iletisim" data-i18n="nav.contact">İletişim</a>
       </div>
       <div class="footer__col">
         <h4 data-i18n="ft.hours">Hizmet</h4>
@@ -376,7 +375,7 @@
     </div>
     <div class="footer__bottom">
       <span>© <span id="year">2026</span> İKON Gümrük Müşavirlik Hizmetleri Ltd. Şti.</span>
-      <span style="display:flex;gap:18px;flex-wrap:wrap"><a href="hizmetler.html" data-i18n="ft.legal1">Hizmet kapsamı</a><a href="iletisim.html#kvkk" data-i18n="ft.legal2">KVKK</a><a href="ATTRIBUTIONS.md" data-i18n="ft.credits">Görsel kaynakları</a></span>
+      <span style="display:flex;gap:18px;flex-wrap:wrap"><a href="hizmetler" data-i18n="ft.legal1">Hizmet kapsamı</a><a href="iletisim#kvkk" data-i18n="ft.legal2">KVKK</a><a href="ATTRIBUTIONS.md" data-i18n="ft.credits">Görsel kaynakları</a></span>
     </div>
   </div>
 </footer>

@@ -2,7 +2,7 @@
 
 [![Deploy to Hostinger](https://github.com/tlgrsy/ikon-gumrukleme/actions/workflows/deploy-hostinger.yml/badge.svg)](https://github.com/tlgrsy/ikon-gumrukleme/actions/workflows/deploy-hostinger.yml)
 
-**GitHub:** <https://github.com/tlgrsy/ikon-gumrukleme> · **Yayın:** `main` dalına her push otomatik deploy tetikler (Hostinger FTP).
+**GitHub:** <https://github.com/tlgrsy/ikon-gumrukleme> · **Yayın:** `main` dalına her push, FTP secrets tanımlıysa Hostinger'a otomatik deploy tetikler.
 
 Awwwards referanslı, çok sayfalı, Türkçe/İngilizce kurumsal web sitesi tasarımı.
 Tasarım yönü **“Signal & Steel”**: derin lacivert-siyah zemin, kâğıt dokulu açık bölümler,
@@ -15,24 +15,36 @@ lojistik sektörünün hi-vis sinyal turuncusu ve editoryal tipografi.
 
 ## Çalıştırma
 
-Kök dizinde basit bir statik sunucu yeterli:
+Kök dizinde temiz URL'leri taklit eden geliştirme sunucusu:
 
 ```bash
-python3 -m http.server 4321
-# http://127.0.0.1:4321
+node tools/dev-server.mjs
+# http://127.0.0.1:4322
 ```
 
-`index.html` doğrudan (`file://`) da açılabilir; ancak harita katmanı ve göreli yollar için
-sunucu üzerinden açmak önerilir.
+`/hizmetler`, `/kurumsal`, `/iletisim` yolları `.html` uzantısı olmadan çalışır;
+`/hizmetler.html` ise 301 ile temiz URL'ye yönlenir. Üretimde bu davranışı kök dizindeki
+`.htaccess` sağlar (Apache/LiteSpeed).
 
 ## Sayfalar
 
-| Sayfa | İçerik |
-| --- | --- |
-| `index.html` | Sinematik hero, manifesto (scroll ile aydınlanan metin), hizmet listesi (hover önizlemeli), 5 adımlı süreç, canlı ağ haritası, turuncu rakam bandı, SSS, CTA, footer |
-| `hizmetler.html` | 6 hizmet bloğu; sabit yan menü + scroll spy, kontrol listeleri, uzman notları |
-| `kurumsal.html` | 1994 hikâyesi, kronoloji, vizyon/misyon, üç seviyeli kalite, ekip, ISO/EDI şeridi |
-| `iletisim.html` | İletişim bilgileri, doğrulamalı form + başarı durumu, Ataşehir haritası |
+| Sayfa | Temiz URL | İçerik |
+| --- | --- | --- |
+| `index.html` | `/` | Sinematik hero, manifesto (scroll ile aydınlanan metin), hizmet listesi (hover önizlemeli), 5 adımlı süreç, canlı ağ haritası, turuncu rakam bandı, SSS, CTA, footer |
+| `hizmetler.html` | `/hizmetler` | 6 hizmet bloğu; sabit yan menü + scroll spy, kontrol listeleri, uzman notları |
+| `kurumsal.html` | `/kurumsal` | 1994 hikâyesi, kronoloji, vizyon/misyon, üç seviyeli kalite, ekip, ISO/EDI şeridi |
+| `iletisim.html` | `/iletisim` | İletişim bilgileri, doğrulamalı form + başarı durumu, Ataşehir haritası |
+
+### Temiz URL'ler
+
+Tüm iç bağlantılar uzantısızdır. `.htaccess`:
+
+- `/sayfa.html` → `/sayfa` (301, query string korunur)
+- `/index.html` → `/`
+- `/sayfa` → dahili olarak `sayfa.html`
+- Dizin olmayan yollarda sondaki `/` kaldırılır
+
+Hostinger (LiteSpeed) `mod_rewrite` destekler; `.htaccess` depo kökünde ve deploy'a dahildir.
 
 ## Tasarım sistemi
 
@@ -71,7 +83,8 @@ sunucu üzerinden açmak önerilir.
 │   ├── js/i18n.js           # TR/EN sözlük ve değiştirici
 │   ├── js/world-dots.js     # dünya haritası nokta verisi
 │   ├── fonts/               # Outfit, Instrument Serif, JetBrains Mono (subset)
-│   └── img/                 # optimize edilmiş görseller + favicon + og.jpg
+│   └── img/                 # optimize görseller + logo.svg + favicon + og.jpg
+├── .htaccess                # temiz URL kuralları (Apache/LiteSpeed)
 ├── tools/                   # üretim / ekran görüntüsü / QA yardımcıları
 ├── ATTRIBUTIONS.md          # görsel lisansları
 ├── robots.txt · sitemap.xml
@@ -93,6 +106,14 @@ bilgi işletim sistemi, motorlu kurye, vizyon/misyon ve gümrük müşavirleri.
 
 Chrome/Edge 111+, Safari 16.4+, Firefox 113+ (`aspect-ratio`, `backdrop-filter`, `clip-path`, `svh` desteklenir). JavaScript kapalıyken içerik
 Türkçe olarak okunabilir kalır.
+
+---
+
+## Marka
+
+- Logo: `assets/img/logo.svg` (beyaz + kırmızı çizgi, koyu zemin için)
+- Header yüksekliği 52px, footer 460px genişlik, preloader 520px genişlik
+- Favicon: `assets/img/favicon.svg` (logodan türetilmiş monogram)
 
 ---
 

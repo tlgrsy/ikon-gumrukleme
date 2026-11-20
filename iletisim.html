@@ -22,7 +22,7 @@
 <div class="progress" id="progress" aria-hidden="true"></div>
 <div class="preloader" id="preloader" aria-hidden="true">
   <div class="preloader__top mono"><span data-i18n="pre.top">Gümrük Müşavirliği</span><span>İstanbul · 41.00°N 29.03°E</span></div>
-  <div class="preloader__brand">ikon</div>
+  <img class="preloader__brand" src="assets/img/logo.svg" width="112" height="57" alt="">
   <div class="preloader__bottom"><span class="preloader__count num" id="preCount">000</span><span class="preloader__bar"><i id="preBar"></i></span><span class="mono" data-i18n="pre.since">1994'ten beri</span></div>
 </div>
 <a class="skip" href="#main" data-i18n="a11y.skip">İçeriğe geç</a>
@@ -31,22 +31,21 @@
 
 <header class="nav" id="nav">
   <div class="nav__inner">
-    <a class="brand" href="index.html" aria-label="İKON ana sayfa">
-      <span class="brand__mark"><span>i</span></span>
-      <span class="brand__type"><span class="brand__word">ikon</span><span class="brand__sub" data-i18n="brand.sub">Gümrük Müşavirliği</span></span>
+    <a class="brand" href="./" aria-label="İKON Gümrük Müşavirlik Hizmetleri">
+      <img class="brand__logo" src="assets/img/logo.svg" width="112" height="57" alt="">
     </a>
     <nav class="nav__menu" aria-label="Ana menü">
-      <a class="nav__link" href="index.html" data-i18n="nav.home">Ana Sayfa<span class="dot"></span></a>
-      <a class="nav__link" href="kurumsal.html" data-i18n="nav.about">Kurumsal<span class="dot"></span></a>
-      <a class="nav__link" href="hizmetler.html" data-i18n="nav.services">Hizmetler<span class="dot"></span></a>
-      <a class="nav__link is-active" href="iletisim.html" data-i18n="nav.contact">İletişim<span class="dot"></span></a>
+      <a class="nav__link" href="./" data-i18n="nav.home">Ana Sayfa<span class="dot"></span></a>
+      <a class="nav__link" href="kurumsal" data-i18n="nav.about">Kurumsal<span class="dot"></span></a>
+      <a class="nav__link" href="hizmetler" data-i18n="nav.services">Hizmetler<span class="dot"></span></a>
+      <a class="nav__link is-active" href="iletisim" data-i18n="nav.contact">İletişim<span class="dot"></span></a>
     </nav>
     <div class="nav__right">
       <div class="lang" role="group" aria-label="Dil">
         <button type="button" data-lang="tr" aria-pressed="true">TR</button>
         <button type="button" data-lang="en" aria-pressed="false">EN</button>
       </div>
-      <a class="btn nav__cta" href="iletisim.html"><span data-i18n="nav.cta">Teklif alın</span><span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+      <a class="btn nav__cta" href="iletisim"><span data-i18n="nav.cta">Teklif alın</span><span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
       <button class="nav__burger" id="burger" aria-label="Menü" aria-expanded="false" aria-controls="menu"><i></i><i></i></button>
     </div>
   </div>
@@ -54,10 +53,10 @@
 
 <div class="menu" id="menu" aria-hidden="true">
   <nav class="menu__links" aria-label="Mobil menü">
-    <a class="menu__link" href="index.html" style="transition-delay:.06s"><em>01</em><span data-i18n="nav.home">Ana Sayfa</span></a>
-    <a class="menu__link" href="kurumsal.html" style="transition-delay:.12s"><em>02</em><span data-i18n="nav.about">Kurumsal</span></a>
-    <a class="menu__link" href="hizmetler.html" style="transition-delay:.18s"><em>03</em><span data-i18n="nav.services">Hizmetler</span></a>
-    <a class="menu__link" href="iletisim.html" style="transition-delay:.24s"><em>04</em><span data-i18n="nav.contact">İletişim</span></a>
+    <a class="menu__link" href="./" style="transition-delay:.06s"><em>01</em><span data-i18n="nav.home">Ana Sayfa</span></a>
+    <a class="menu__link" href="kurumsal" style="transition-delay:.12s"><em>02</em><span data-i18n="nav.about">Kurumsal</span></a>
+    <a class="menu__link" href="hizmetler" style="transition-delay:.18s"><em>03</em><span data-i18n="nav.services">Hizmetler</span></a>
+    <a class="menu__link" href="iletisim" style="transition-delay:.24s"><em>04</em><span data-i18n="nav.contact">İletişim</span></a>
   </nav>
   <div class="menu__foot">
     <span>+90 216 324 05 95</span>
@@ -71,7 +70,7 @@
   <section class="page-hero grain">
     <div class="shell">
       <div class="page-hero__meta">
-        <div class="crumbs"><a href="index.html" data-i18n="nav.home">Ana Sayfa</a><span>/</span><span data-i18n="nav.contact">İletişim</span></div>
+        <div class="crumbs"><a href="./" data-i18n="nav.home">Ana Sayfa</a><span>/</span><span data-i18n="nav.contact">İletişim</span></div>
         <span class="mono" style="color:var(--muted)">41.00°N · 29.03°E</span>
       </div>
       <h1 data-i18n="ct.title">Konuşalım<span style="color:var(--orange)">.</span></h1>
@@ -176,7 +175,7 @@
 
 <footer class="footer">
   <div class="shell">
-    <div class="footer__word">ikon<em class="footer__word-meta">Gümrük Müşavirliği<br>1994'ten beri · İstanbul</em></div>
+    <div class="footer__word"><img src="assets/img/logo.svg" width="112" height="57" alt="İKON"><em class="footer__word-meta" data-i18n="ft.since">1994'ten beri · İstanbul</em></div>
     <div class="footer__grid">
       <div class="footer__col">
         <h4 data-i18n="ft.office">Merkez ofis</h4>
@@ -187,14 +186,14 @@
         <h4 data-i18n="ft.contact">İletişim</h4>
         <a href="tel:+902163240595">T +90 216 324 05 95</a>
         <a href="tel:+902163249444">F +90 216 324 94 44</a>
-        <a href="iletisim.html" data-i18n="ft.form">Teklif formu</a>
+        <a href="iletisim" data-i18n="ft.form">Teklif formu</a>
       </div>
       <div class="footer__col">
         <h4 data-i18n="ft.menu">Menü</h4>
-        <a href="index.html" data-i18n="nav.home">Ana Sayfa</a>
-        <a href="kurumsal.html" data-i18n="nav.about">Kurumsal</a>
-        <a href="hizmetler.html" data-i18n="nav.services">Hizmetler</a>
-        <a href="iletisim.html" data-i18n="nav.contact">İletişim</a>
+        <a href="./" data-i18n="nav.home">Ana Sayfa</a>
+        <a href="kurumsal" data-i18n="nav.about">Kurumsal</a>
+        <a href="hizmetler" data-i18n="nav.services">Hizmetler</a>
+        <a href="iletisim" data-i18n="nav.contact">İletişim</a>
       </div>
       <div class="footer__col">
         <h4 data-i18n="ft.hours">Hizmet</h4>
@@ -205,7 +204,7 @@
     </div>
     <div class="footer__bottom">
       <span>© <span id="year">2026</span> İKON Gümrük Müşavirlik Hizmetleri Ltd. Şti.</span>
-      <span style="display:flex;gap:18px;flex-wrap:wrap"><a href="hizmetler.html" data-i18n="ft.legal1">Hizmet kapsamı</a><a href="iletisim.html#kvkk" data-i18n="ft.legal2">KVKK</a><a href="ATTRIBUTIONS.md" data-i18n="ft.credits">Görsel kaynakları</a></span>
+      <span style="display:flex;gap:18px;flex-wrap:wrap"><a href="hizmetler" data-i18n="ft.legal1">Hizmet kapsamı</a><a href="iletisim#kvkk" data-i18n="ft.legal2">KVKK</a><a href="ATTRIBUTIONS.md" data-i18n="ft.credits">Görsel kaynakları</a></span>
     </div>
   </div>
 </footer>

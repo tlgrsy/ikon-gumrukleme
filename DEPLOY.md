@@ -43,6 +43,10 @@ Depo → **Settings → Secrets and variables → Actions → New repository sec
 
 > FTP şifresini sohbete yazmayın; yalnızca GitHub Secrets'a ekleyin.
 
+> `.htaccess` gizli dosyası deploy'a dahildir; Hostinger'da temiz URL'ler bu dosya ile çalışır.
+> 404 alırsanız dosyanın `public_html/.htaccess` altında olduğunu ve LiteSpeed'in
+> `mod_rewrite` desteğinin açık olduğunu kontrol edin.
+
 ## 4. Otomatik yayın
 
 - `main` dalına push → **Actions → Deploy to Hostinger** otomatik çalışır.
@@ -71,6 +75,8 @@ Daha temiz bir yayın için FTP + Actions akışı önerilir.
 - [ ] Alan adı `https://www.ikongumrukleme.com` ise `sitemap.xml`, `robots.txt` ve JSON-LD güncel.
 - [ ] Hostinger SSL (Let's Encrypt) aktif; HTTP → HTTPS yönlendirmesi açık.
 - [ ] `preview/` ve `tools/` dizinleri canlıda görünmüyor.
+- [ ] Temiz URL'ler çalışıyor: `/hizmetler` 200, `/hizmetler.html` 301.
+- [ ] `.htaccess` sunucuya yüklendi ve `mod_rewrite` etkin.
 - [ ] Form backend'e bağlandı (Formspree / Netlify Forms / kendi API).
 - [ ] `ATTRIBUTIONS.md` lisans notları korundu veya fotoğraflar kurumsal çekimlerle değiştirildi.
 - [ ] Hostinger önbelleği temizlendi (varsa CDN/cache).

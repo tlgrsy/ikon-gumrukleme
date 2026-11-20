@@ -59,6 +59,7 @@
     'faq.q5': 'How long does a file take?', 'faq.a5': 'It depends on the goods, the regime, the workload of the customs office and the completeness of the documents. That is why our first step is to complete the paperwork and give you a realistic timeline — and to share every step as it happens.',
     'cta.label': 'A new file', 'cta.title1': 'Your cargo is moving.', 'cta.title2': 'Your documents are with us.',
     'cta.sub': 'Import, export or transit — even for a single file, let us be the right contact. We\'re one phone call away.', 'cta.b1': 'Get a quote',
+    'ft.since': 'Since 1994 · Istanbul',
     'ft.office': 'Head office', 'ft.directions': 'Get directions ↗', 'ft.contact': 'Contact', 'ft.form': 'Quote form', 'ft.menu': 'Menu', 'ft.hours': 'Service',
     'ft.h1': 'Weekday customs operations', 'ft.h2': '24/7 motor courier', 'ft.h3': 'Representation at all customs offices',
     'ft.legal1': 'Scope of services', 'ft.legal2': 'Privacy', 'ft.credits': 'Image credits',

@@ -15,11 +15,11 @@ ws.onmessage=ev=>{const m=JSON.parse(ev.data);
 const send=(method,params={})=>new Promise((res,rej)=>{const i=++id;pend.set(i,{res,rej});ws.send(JSON.stringify({id:i,method,params}))});
 const ev=async e=>(await send('Runtime.evaluate',{expression:e,returnByValue:true})).result.value;
 await send('Page.enable');await send('Runtime.enable');await send('Log.enable');
-const pages=['index.html','hizmetler.html','kurumsal.html','iletisim.html'];
+const pages=['','hizmetler','kurumsal','iletisim'];
 for(const [w,h] of [[390,844],[768,1024],[1280,800],[1440,900]]){
   await send('Emulation.setDeviceMetricsOverride',{width:w,height:h,deviceScaleFactor:1,mobile:w<600});
   for(const p of pages){
-    logs=[];await send('Page.navigate',{url:`http://127.0.0.1:4321/${p}`});await sleep(3200);
+    logs=[];await send('Page.navigate',{url:`http://127.0.0.1:4322/${p}`});await sleep(3200);
     const o=await ev(`(()=>{const de=document.documentElement;const imgs=[...document.images];const broken=imgs.filter(i=>i.complete&&i.naturalWidth===0).map(i=>i.currentSrc.split('/').pop());return {sw:de.scrollWidth,cw:de.clientWidth,broken,title:document.title.slice(0,40)}})()`);
     console.log(`${w}px ${p.padEnd(15)} overflow:${o.sw-o.cw}px broken:${o.broken.length?o.broken.join(','):'0'} ${logs.length?('LOG '+logs.join(' | ')):''}`);
   }

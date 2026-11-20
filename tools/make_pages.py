@@ -54,7 +54,7 @@ def page(filename, title, tk, desc, dk, active, body, body_class=''):
 H_SERVICES = '''  <section class="page-hero grain">
     <div class="shell">
       <div class="page-hero__meta">
-        <div class="crumbs"><a href="index.html" data-i18n="nav.home">Ana Sayfa</a><span>/</span><span data-i18n="nav.services">Hizmetler</span></div>
+        <div class="crumbs"><a href="./" data-i18n="nav.home">Ana Sayfa</a><span>/</span><span data-i18n="nav.services">Hizmetler</span></div>
         <span class="mono" style="color:var(--muted)" data-i18n="svp.count">01 — 06</span>
       </div>
       <h1 data-i18n="svp.title">Gümrük, bir <em>süreç</em> meselesi.</h1>
@@ -300,7 +300,7 @@ H_SERVICES = '''  <section class="page-hero grain">
       <h2 class="cta__title" data-reveal><span data-i18n="cta.title1">Yükünüz yolda,</span> <em data-i18n="cta.title2">evrakınız bizde.</em></h2>
       <p class="cta__sub" data-i18n="svp.cta.sub">Hizmet kapsamınızı birlikte netleştirelim. Dosyanızı anlatın; en doğru yol haritasını çıkaralım.</p>
       <div class="cta__actions">
-        <a class="btn" href="iletisim.html" data-magnetic><span data-i18n="cta.b1">Teklif alın</span><span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+        <a class="btn" href="iletisim" data-magnetic><span data-i18n="cta.b1">Teklif alın</span><span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
         <a class="btn btn--ghost" href="tel:+902163240595" data-magnetic><span>+90 216 324 05 95</span><span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span></a>
       </div>
     </div>
@@ -308,13 +308,13 @@ H_SERVICES = '''  <section class="page-hero grain">
 
 page('hizmetler.html', 'Hizmetler — İthalat, İhracat, Mevzuat | İKON Gümrük Müşavirliği', 'meta.svc.title',
      'İthalat ve ihracat işlemleri, bilgi işletim sistemi, mevzuat danışmanlığı, motorlu kurye ve EDI. İKON Gümrük Müşavirliği hizmetleri.',
-     'meta.svc.desc', 'hizmetler.html', H_SERVICES)
+     'meta.svc.desc', 'hizmetler', H_SERVICES)
 
 # ============================ KURUMSAL ============================
 H_ABOUT = '''  <section class="page-hero page-hero--light">
     <div class="shell">
       <div class="page-hero__meta">
-        <div class="crumbs"><a href="index.html" data-i18n="nav.home">Ana Sayfa</a><span>/</span><span data-i18n="nav.about">Kurumsal</span></div>
+        <div class="crumbs"><a href="./" data-i18n="nav.home">Ana Sayfa</a><span>/</span><span data-i18n="nav.about">Kurumsal</span></div>
         <span class="mono" style="color:var(--muted-2)" data-i18n="ab.count">1994 — bugün</span>
       </div>
       <h1 data-i18n="ab.title">1994'ten beri <em>son nokta.</em></h1>
@@ -422,21 +422,21 @@ H_ABOUT = '''  <section class="page-hero page-hero--light">
       <h2 class="cta__title" data-reveal><span data-i18n="ab.cta.t1">Doğru ekip,</span> <em data-i18n="ab.cta.t2">doğru sonuç.</em></h2>
       <p class="cta__sub" data-i18n="ab.cta.sub">Dosyanızı birlikte açalım; süreci baştan sona planlayalım. İKON ekibi bir telefon uzağınızda.</p>
       <div class="cta__actions">
-        <a class="btn" href="iletisim.html" data-magnetic><span data-i18n="cta.b1">Teklif alın</span><span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
-        <a class="btn btn--ghost" href="hizmetler.html" data-magnetic><span data-i18n="sv.all">Tüm hizmetler</span><span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+        <a class="btn" href="iletisim" data-magnetic><span data-i18n="cta.b1">Teklif alın</span><span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+        <a class="btn btn--ghost" href="hizmetler" data-magnetic><span data-i18n="sv.all">Tüm hizmetler</span><span class="btn__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
       </div>
     </div>
   </section>'''
 
 page('kurumsal.html', 'Kurumsal — 1994\'ten beri | İKON Gümrük Müşavirliği', 'meta.about.title',
      '1994\'ten beri gümrük müşavirliği: İKON\'un hikâyesi, vizyonu, misyonu, değerleri ve gümrük müşavirleri.',
-     'meta.about.desc', 'kurumsal.html', H_ABOUT, 'nav-on-light')
+     'meta.about.desc', 'kurumsal', H_ABOUT, 'nav-on-light')
 
 # ============================ İLETİŞİM ============================
 H_CONTACT = '''  <section class="page-hero grain">
     <div class="shell">
       <div class="page-hero__meta">
-        <div class="crumbs"><a href="index.html" data-i18n="nav.home">Ana Sayfa</a><span>/</span><span data-i18n="nav.contact">İletişim</span></div>
+        <div class="crumbs"><a href="./" data-i18n="nav.home">Ana Sayfa</a><span>/</span><span data-i18n="nav.contact">İletişim</span></div>
         <span class="mono" style="color:var(--muted)">41.00°N · 29.03°E</span>
       </div>
       <h1 data-i18n="ct.title">Konuşalım<span style="color:var(--orange)">.</span></h1>
@@ -540,4 +540,4 @@ H_CONTACT = '''  <section class="page-hero grain">
 
 page('iletisim.html', 'İletişim — İKON Gümrük Müşavirliği', 'meta.contact.title',
      'İKON Gümrük Müşavirlik Hizmetleri: Ataşehir, İstanbul. Telefon +90 216 324 05 95. Teklif ve danışmanlık için iletişim formu.',
-     'meta.contact.desc', 'iletisim.html', H_CONTACT)
+     'meta.contact.desc', 'iletisim', H_CONTACT)
