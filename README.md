@@ -1,5 +1,9 @@
 # İKON Gümrük Müşavirliği — Kurumsal Web Sitesi
 
+[![Deploy to Hostinger](https://github.com/tlgrsy/ikon-gumrukleme/actions/workflows/deploy-hostinger.yml/badge.svg)](https://github.com/tlgrsy/ikon-gumrukleme/actions/workflows/deploy-hostinger.yml)
+
+**GitHub:** <https://github.com/tlgrsy/ikon-gumrukleme> · **Yayın:** `main` dalına her push otomatik deploy tetikler (Hostinger FTP).
+
 Awwwards referanslı, çok sayfalı, Türkçe/İngilizce kurumsal web sitesi tasarımı.
 Tasarım yönü **“Signal & Steel”**: derin lacivert-siyah zemin, kâğıt dokulu açık bölümler,
 lojistik sektörünün hi-vis sinyal turuncusu ve editoryal tipografi.
