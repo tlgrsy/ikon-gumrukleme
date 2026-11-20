@@ -1,0 +1,41 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Outfit;src:url('../assets/fonts/Outfit-200_600-latin.woff2') format('woff2');font-weight:200 600}
+@font-face{font-family:Outfit;src:url('../assets/fonts/Outfit-200_600-latin-ext.woff2') format('woff2');font-weight:200 600;unicode-range:U+0100-02BA,U+1E00-1E9F}
+@font-face{font-family:Instrument;src:url('../assets/fonts/InstrumentSerif-Italic-latin.woff2') format('woff2');font-style:italic;font-weight:400}
+@font-face{font-family:Instrument;src:url('../assets/fonts/InstrumentSerif-Italic-latin-ext.woff2') format('woff2');font-style:italic;font-weight:400;unicode-range:U+0100-02BA}
+*{box-sizing:border-box;margin:0}
+body{width:1200px;height:630px;background:#070A0F;color:#F5F2EC;font-family:Outfit,sans-serif;overflow:hidden;position:relative}
+.img{position:absolute;inset:0 0 0 52%;}
+.img img{width:100%;height:100%;object-fit:cover;filter:saturate(.8) contrast(1.05) brightness(.9)}
+.img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#070A0F 0%,rgba(7,10,15,.86) 20%,rgba(7,10,15,.18) 58%,rgba(7,10,15,.5) 100%),linear-gradient(0deg,rgba(7,10,15,.95),rgba(7,10,15,0) 46%)}
+.wrap{position:relative;z-index:2;height:100%;padding:54px 58px;display:flex;flex-direction:column;justify-content:space-between}
+.top{display:flex;align-items:center;gap:16px}
+.mark{width:54px;height:54px;border-radius:50%;background:linear-gradient(140deg,#1E3FAE,#0C1633 70%);display:grid;place-items:center;position:relative;overflow:hidden}
+.mark::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 20%,rgba(255,90,31,.55),transparent 55%)}
+.mark span{font-family:Instrument,serif;font-style:italic;font-size:34px;position:relative;z-index:1;transform:translateY(-2px)}
+.word{font-family:Instrument,serif;font-style:italic;font-size:38px;line-height:1}
+.sub{font-family:'Courier New',monospace;font-size:9px;letter-spacing:.22em;color:#8E95A1;margin-top:4px;text-transform:uppercase}
+.tag{position:absolute;right:58px;top:58px;font-family:'Courier New',monospace;font-size:10px;letter-spacing:.18em;color:#FF5A1F;text-transform:uppercase;background:rgba(7,10,15,.55);border:1px solid rgba(255,255,255,.14);padding:9px 13px;border-radius:100px;backdrop-filter:blur(8px)}
+h1{font-size:92px;line-height:.9;letter-spacing:-.045em;font-weight:300;max-width:640px;margin-top:26px}
+h1 .o{color:#FF5A1F}
+.foot{display:flex;justify-content:space-between;align-items:flex-end;padding-top:22px;border-top:1px solid rgba(245,242,236,.16)}
+.foot p{font-family:'Courier New',monospace;font-size:10px;letter-spacing:.12em;color:#C6C8CD;line-height:1.8;text-transform:uppercase;text-shadow:0 1px 14px rgba(0,0,0,.9)}
+.foot b{color:#F5F2EC;font-weight:400}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:'Courier New',monospace;font-size:10px;letter-spacing:.18em;color:#A7ADB8;text-transform:uppercase}
+.eyebrow i{width:6px;height:6px;border-radius:50%;background:#FF5A1F;display:block}
+</style></head><body>
+<div class="img"><img src="../assets/img/hero-1800.jpg" alt=""></div>
+<div class="wrap">
+  <div class="top"><div class="mark"><span>i</span></div><div><div class="word">ikon</div><div class="sub">Gümrük Müşavirliği</div></div></div>
+  <div class="tag">Est. 1994 · İstanbul</div>
+  <div>
+    <div class="eyebrow"><i></i>Gümrük Müşavirliği · 1994'ten beri</div>
+    <h1>Dünyayı<br>ayağınıza<br><span class="o">getiririz.</span></h1>
+  </div>
+  <div class="foot">
+    <p><b>İthalat · İhracat · Transit</b><br>Mevzuat · EDI · Motorlu kurye</p>
+    <p style="text-align:right">Ataşehir / İstanbul<br>+90 216 324 05 95</p>
+  </div>
+</div>
+</body></html>

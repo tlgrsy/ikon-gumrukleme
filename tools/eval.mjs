@@ -1,0 +1,20 @@
+import { spawn } from 'node:child_process';
+import { setTimeout as sleep } from 'node:timers/promises';
+const CHROME='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const [url, expr, w='1440', h='900']=process.argv.slice(2);
+const port=9900+Math.floor(Math.random()*90);
+const chrome=spawn(CHROME,[`--remote-debugging-port=${port}`,`--user-data-dir=/tmp/cdp-${port}`,'--headless=new','--disable-gpu','--hide-scrollbars','--no-first-run',`--window-size=${w},${h}`,'about:blank'],{stdio:'ignore'});
+setTimeout(()=>{try{chrome.kill()}catch{};process.exit(2)},60000);
+async function target(){for(let i=0;i<120;i++){try{const r=await fetch(`http://127.0.0.1:${port}/json/list`);const l=await r.json();const p=l.find(t=>t.type==='page');if(p)return p}catch{}await sleep(150)}throw new Error('no chrome')}
+const t=await target(); const ws=new WebSocket(t.webSocketDebuggerUrl);
+await new Promise((res,rej)=>{ws.onopen=res;ws.onerror=rej});
+let id=0;const pend=new Map();
+ws.onmessage=ev=>{const m=JSON.parse(ev.data); if(m.id&&pend.has(m.id)){const{res,rej}=pend.get(m.id);pend.delete(m.id);m.error?rej(new Error(JSON.stringify(m.error))):res(m.result)}};
+const send=(method,params={})=>new Promise((res,rej)=>{const i=++id;pend.set(i,{res,rej});ws.send(JSON.stringify({id:i,method,params}))});
+await send('Page.enable'); await send('Runtime.enable');
+await send('Emulation.setDeviceMetricsOverride',{width:+w,height:+h,deviceScaleFactor:1,mobile:+w<600});
+await send('Page.navigate',{url});
+await sleep(3800);
+const r=await send('Runtime.evaluate',{expression:expr,returnByValue:true,awaitPromise:true});
+console.log(JSON.stringify(r.result.value??r.result,null,1));
+ws.close();chrome.kill();process.exit(0);

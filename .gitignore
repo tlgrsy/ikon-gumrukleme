@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# editörler
+.vscode/
+.idea/
+*.swp
+
+# yerel / gizli
+.env
+.env.*
+*.local
+
+# ekran görüntüsü QA çıktıları
+preview/_qa/
+
+# FTP deploy durumu
+.ftp-deploy-sync-state.json
